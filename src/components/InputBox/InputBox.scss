@@ -1,0 +1,54 @@
+.input_box_container {
+  width: max-content;
+  position: relative;
+  .inputbox {
+    width: max-content;
+    border-radius: var(--radius-xl);
+    border: none;
+    outline: 2px solid var(--border-light-dark);
+    padding: var(--space-xs) var(--space-md);
+
+    transition: 500ms;
+    font-size: 14px;
+    height: 100%;
+
+    &:hover {
+      outline: 2px solid var(--primary-solid);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--primary-solid);
+    }
+
+    .first_child {
+      position: absolute;
+      left: 0px;
+    }
+
+    .last_child {
+      position: absolute;
+      right: 0px;
+    }
+  }
+  .first_child {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: grid;
+  }
+  .last_child {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+
+    transform: translateY(-50%);
+    display: grid;
+  }
+
+  .shift_x {
+    &::-webkit-search-cancel-button {
+      position: absolute;
+      right: 35px;
+    }
+  }
+}

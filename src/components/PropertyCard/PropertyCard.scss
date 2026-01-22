@@ -1,0 +1,180 @@
+.property_card {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1.2fr 0.8fr;
+  // gap: var(--space-md);
+  border-radius: var(--radius-lg);
+  box-sizing: content-box;
+  transition: 500ms;
+  margin-bottom: var(--space-lg);
+  cursor: pointer;
+
+  .upper_body {
+    background-color: rgb(0, 0, 0);
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    height: 200px;
+    box-sizing: border-box;
+    position: relative;
+    img {
+      border-top-left-radius: var(--radius-md);
+      border-top-right-radius: var(--radius-md);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .extra_content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: var(--space-md);
+
+      .top_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-md);
+
+        .status_type {
+          display: flex;
+          align-items: center;
+          gap: var(--space-sm);
+          padding: var(--space-sm);
+          // border: 2px solid var(--border-light-dark);
+          font-size: 12px;
+          line-height: 100%;
+          color: var(--text-primary);
+          background-color: var(--bg-chip);
+        }
+      }
+      .bottom_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sliderbuttonicon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0%, -30%);
+        opacity: 0;
+      }
+
+      transition: 500ms;
+      &:hover {
+        .sliderbuttonicon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .lower_body {
+    border-bottom-left-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+    // background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    gap: var(--space-sm);
+
+    .status_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .status_type {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-sm);
+        border: 2px solid var(--border-light-dark);
+        font-size: 12px;
+        line-height: 100%;
+        color: var(--text-primary);
+
+        .badge {
+          width: 10px;
+          height: 10px;
+          background-color: var(--accent-success);
+        }
+      }
+
+      .views {
+        border: none;
+      }
+    }
+
+    .prize_n_meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .prize {
+        font-size: 18px;
+        color: var(--primary-solid);
+        font-weight: 600;
+      }
+
+      .meta_content {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+        gap: var(--space-md);
+
+        .meta {
+          color: var(--primary-solid);
+          font-weight: 500;
+          font-size: 12px;
+          font-style: bold;
+          display: flex;
+          gap: var(--space-xs);
+          align-items: baseline;
+
+          .meta_subtitle {
+            font-weight: 400;
+            font-size: 10px;
+
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+
+    .address_div {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+
+      .main {
+        font-size: 14px;
+        color: var(--text-primary);
+
+        .subcontent {
+        }
+      }
+
+      .remaining {
+        color: var(--text-secondary);
+        font-size: 14px;
+      }
+    }
+  }
+
+  box-shadow: var(--shadow-md);
+  &:hover {
+    // box-shadow: var(--shadow-sm);
+    // box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-xl);
+    // box-shadow: var(--shadow-card);
+  }
+}
