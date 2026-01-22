@@ -18,7 +18,7 @@ import PropertyCard from "../../components/PropertyCard/PropertyCard";
 import { propertyList } from "../../components/PropertyCard/Properties";
 import ModalComponent from "../../components/Modal/ModalComponent";
 import Dropdown from "../../components/Dropdown/Dropdown";
-const MainBody = () => {
+const Body = () => {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [isMapOpen, setisMapOpen] = useState(false);
   const [Properties, setProperties] = useState({ ...propertyList });
@@ -213,4 +213,4 @@ const MainBody = () => {
   );
 };
 
-export default MainBody;
+export default Body;
